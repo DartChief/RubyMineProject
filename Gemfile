@@ -49,5 +49,6 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'slim-rails'
 gem 'make_flaggable', :git => 'https://github.com/jaimeiniesta/make_flaggable.git'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
+ruby '2.2.3'
