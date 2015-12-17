@@ -12,7 +12,7 @@ div
         p = post.content
 
         - if user_signed_in?
-          = toggle_like_button(post, current_user)
+          = toggle_like_button(post)
 
         = link_to 'Show Post', post_path(post), class: 'btn btn-default'
 

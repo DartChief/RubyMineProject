@@ -1,28 +1,33 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Daniel's Blog
 
-Things you may want to cover:
+Made by Еднаков Даниил
 
-* Ruby version
+Блог с использование гемов devise, bootstap-sass, slim-rails
+Дополнительную фичу вы разрешили мне выбрать самостоятельно, подробнее внизу
 
-* System dependencies
+Основные возможности:
+1. Возможность создавать новых юзеров(Sign up) и заходить под ними в систему(Sign in)
+1.2. Возможность выходить из системы(Sign out), кнопка видна только когда юзер залогинен
+2. Возможность создавать новые посты (New Post) только авторизированным юзерам
+3. Возможность просматривать пост (Show Post)
+4. Возможность редактировать и удалять посты (только хозяином поста, Delete на
+странице с постами, Edit на странице поста)
+5. Возможность изменять данные юзера
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-test
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Дополнительные фичи(я решил сделать две небольшие фичи):
+1. Кнопка Like/Dislike - возможность ставить лайк/дизлайк
+    Реализованно гемом make_flaggable
+    Прописано в роутах
+    Метод like находится в PostsController и отвечает за flag/unflag и выведение
+    сообщения о том, что вы лайкнули/дизлайкнули пост
+    Хелпер для с link_to - toggle_like_button назодится в helpers/posts_helper
+    Фича не считает, сколько всего посту поставлено лайков, но учитывает пользователя
+    который ставил лайк(если вы поставили лайк посту, то независимо о того, ставил ли кто-то ему дизлайк,
+    у вас будет отображаться, что вы ставили ему лайк)
+2. Переход к постам кокретного пользователя по клику на его email в посте
+    Тут все понятно, кликаете на мэйл, осуществляется переход на страницу с постами этого пользователя
+    Метод user_post находится в PostsController
+    Прописано в роутах
+    На странице с постами email - это ссылка на переход
