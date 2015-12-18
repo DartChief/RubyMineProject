@@ -23,4 +23,4 @@ div
 - if user_signed_in?
   = link_to 'New Post', new_post_path, class: 'btn btn-default'
 - if !user_signed_in? && !@posts.any?
-  = 'dsfsdfdf'
+  p = 'Nothing to show'
